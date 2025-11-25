@@ -1,0 +1,40 @@
+{
+  "name": "final-carousel",
+  "version": "1.0.0",
+  "description": "Premium Smart Suggestions Carousel component for OK2GO app with expandable Quick Guides",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0",
+    "react-native-reanimated": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0"
+  },
+  "keywords": [
+    "react-native",
+    "carousel",
+    "ok2go",
+    "suggestions",
+    "expandable",
+    "premium",
+    "ui-component"
+  ],
+  "author": "OK2GO Development Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "internal"
+  },
+  "files": [
+    "components/",
+    "styles/",
+    "data/",
+    "index.js",
+    "README.md"
+  ]
+}
