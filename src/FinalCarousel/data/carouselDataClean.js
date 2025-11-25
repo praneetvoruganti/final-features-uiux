@@ -31,31 +31,6 @@ export const suggestionCategories = [
         },
       },
       {
-        id: 'guide-2',
-        icon: 'star',
-        title: 'Sharing Your ETA',
-        description:
-          'Heading home late or to the airport? Share your live trip so family tracks you instead of spamming “reached aa?”.',
-        highlight: 'Learn about safety features',
-        expandable: true,
-        detailedGuide: {
-          steps: [
-            '1. Once your OK2GO ride starts, open the trip screen.',
-            '2. Tap the Share Trip / Share ETA icon.',
-            '3. Choose how to share: SMS, WhatsApp, or copy link.',
-            '4. Select contacts from your phone or enter numbers manually.',
-            '5. Your contacts receive a live link with your real-time location and ETA.',
-            '6. They can track your journey progress till the ride ends.',
-            '7. Sharing stops automatically once you complete the trip.',
-          ],
-          tips: [
-            '- Safety first: Always share your ride with a trusted contact on late-night trips.',
-            '- Ask close family to pin the link in chat so they don’t lose it mid-lecture.',
-            '- Recipients see when you start, move, and reach – no need for constant calls.',
-          ],
-        },
-      },
-      {
         id: 'guide-3',
         icon: 'star',
         title: 'Adding Multiple Stops',
