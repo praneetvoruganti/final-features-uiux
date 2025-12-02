@@ -27,7 +27,28 @@ const colors = {
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: '#1A1A1A',
+  },
+
+  // Map Background
+  mapBackground: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0,
+  },
+
+  // Dark Overlay
+  darkOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    zIndex: 1,
   },
 
   // Floating Header - Premium
@@ -39,7 +60,7 @@ export default StyleSheet.create({
       default: 56,
     }),
     left: 24,
-    zIndex: 10,
+    zIndex: 100,
   },
   menuButton: {
     width: 44,
@@ -65,6 +86,7 @@ export default StyleSheet.create({
   // Full Screen Scroll Container
   scrollContainer: {
     flex: 1,
+    zIndex: 10,
   },
   scrollView: {
     flex: 1,
@@ -134,6 +156,26 @@ export default StyleSheet.create({
     elevation: 4,
   },
 
+  // Two-column card layout
+  rideCardContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: isSmallDevice ? 12 : 16,
+  },
+  rideCardTextSection: {
+    flex: 1,
+  },
+  rideCardImageSection: {
+    width: isSmallDevice ? 80 : 100,
+    height: isSmallDevice ? 80 : 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rideCardImage: {
+    width: '100%',
+    height: '100%',
+  },
+
   // Small Ride Card (2-column) - Compact premium
   rideCardSmall: {
     flex: 1,
@@ -154,7 +196,7 @@ export default StyleSheet.create({
   rideCardHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: isSmallDevice ? 10 : 12,
+    marginBottom: isSmallDevice ? 8 : 10,
   },
   rideIndicator: {
     width: 4,

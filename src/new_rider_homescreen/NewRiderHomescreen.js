@@ -6,10 +6,12 @@ import {
   Animated,
   ScrollView,
   StatusBar,
+  Image,
 } from 'react-native';
 import styles from './styles';
 import SmartSuggestionsCarousel from '../FinalCarousel/components/SmartSuggestionsCarousel';
 import { suggestionCategories } from '../FinalCarousel/data/carouselDataClean';
+import MapBackground from './assets/map.svg';
 
 const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -89,7 +91,19 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#FAFAFA" />
+      <StatusBar barStyle="light-content" backgroundColor="#1A1A1A" />
+
+      {/* Map Background */}
+      <View style={styles.mapBackground}>
+        <MapBackground
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid slice"
+        />
+      </View>
+
+      {/* Dark Overlay */}
+      <View style={styles.darkOverlay} />
 
       {/* Floating Menu Button */}
       <Animated.View style={[styles.header, { opacity: fadeAnim }]}>
@@ -126,21 +140,32 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
 
           {/* Ride Types Grid */}
           <View style={styles.rideTypesGrid}>
-            {/* Instant Rides - Featured */}
+            {/* Ride Now - Featured */}
             <Animated.View style={getCardStyle(card1Anim)}>
               <TouchableOpacity
                 style={[styles.rideCard, styles.rideCardFeatured]}
                 onPress={() => handleRideType('instant')}
                 activeOpacity={0.9}
               >
-                <View style={styles.rideCardHeader}>
-                  <View style={styles.rideIndicator} />
-                  <Text style={styles.rideTitle}>Ride Now</Text>
+                <View style={styles.rideCardContent}>
+                  <View style={styles.rideCardTextSection}>
+                    <View style={styles.rideCardHeader}>
+                      <View style={styles.rideIndicator} />
+                      <Text style={styles.rideTitle}>Ride Now</Text>
+                    </View>
+                    <Text style={styles.rideTagline}>Zero Surge</Text>
+                    <Text style={styles.rideDescription}>
+                      Your Ride, Your Money{'\n'}Their Livelihood
+                    </Text>
+                  </View>
+                  <View style={styles.rideCardImageSection}>
+                    <Image
+                      source={require('./assets/ridenowsvg.svg')}
+                      style={styles.rideCardImage}
+                      resizeMode="contain"
+                    />
+                  </View>
                 </View>
-                <Text style={styles.rideTagline}>Zero Surge</Text>
-                <Text style={styles.rideDescription}>
-                  Your Ride, Your Money{'\n'}Their Livelihood
-                </Text>
               </TouchableOpacity>
             </Animated.View>
 
@@ -192,14 +217,25 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
                 onPress={() => handleRideType('schedule')}
                 activeOpacity={0.9}
               >
-                <View style={styles.rideCardHeader}>
-                  <View style={styles.rideIndicator} />
-                  <Text style={styles.rideTitle}>Schedule</Text>
+                <View style={styles.rideCardContent}>
+                  <View style={styles.rideCardTextSection}>
+                    <View style={styles.rideCardHeader}>
+                      <View style={styles.rideIndicator} />
+                      <Text style={styles.rideTitle}>Schedule</Text>
+                    </View>
+                    <Text style={styles.rideTagline}>Ride. Reserved.</Text>
+                    <Text style={styles.rideDescription}>
+                      Your Daily Commute,{'\n'}Perfectly Scheduled
+                    </Text>
+                  </View>
+                  <View style={styles.rideCardImageSection}>
+                    <Image
+                      source={require('./assets/map.svg')}
+                      style={styles.rideCardImage}
+                      resizeMode="contain"
+                    />
+                  </View>
                 </View>
-                <Text style={styles.rideTagline}>Ride. Reserved.</Text>
-                <Text style={styles.rideDescription}>
-                  Your Daily Commute,{'\n'}Perfectly Scheduled
-                </Text>
               </TouchableOpacity>
             </Animated.View>
           </View>

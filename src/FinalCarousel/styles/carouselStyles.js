@@ -23,11 +23,11 @@ export const carouselStyles = StyleSheet.create({
 
   // Premium Title
   title: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: '700',
     paddingHorizontal: HORIZONTAL_PADDING,
     marginBottom: 24,
-    color: colors.textTertiary,
+    color: colors.textPrimary,
     letterSpacing: 2.5,
     lineHeight: 16,
     textAlign: 'left',
