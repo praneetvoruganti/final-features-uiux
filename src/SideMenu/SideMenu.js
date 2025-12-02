@@ -18,12 +18,25 @@ const DRAWER_WIDTH = SCREEN_WIDTH * 0.8;
 const menuItems = [
   { id: 'home', title: 'Home', letter: 'H', color: '#66a6ff' },
   { id: 'driver_home', title: 'Driver Home', letter: 'D', color: '#f5576c' },
+  { id: 'rider_home', title: 'Rider Home', letter: 'R', color: '#EE436E' },
   { id: 'rating', title: 'Rating', letter: 'R', color: '#FFD700' },
   {
     id: 'completed_rides',
     title: 'Completed Rides',
     letter: 'C',
     color: '#00C853',
+  },
+  {
+    id: 'transactions',
+    title: 'Transactions',
+    letter: 'T',
+    color: '#EE436E',
+  },
+  {
+    id: 'rider_my_rides',
+    title: 'Rider My Rides',
+    letter: 'R',
+    color: '#EE436E',
   },
   {
     id: 'driver_my_rides',

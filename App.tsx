@@ -26,9 +26,12 @@ import { suggestionCategories } from './src/FinalCarousel/data/carouselDataClean
 import SearchM from './src/SearchM/SearchM';
 import SideMenu from './src/SideMenu/SideMenu';
 import NewDriverHomescreen from './src/new_driver_homescreen';
+import NewRiderHomescreen from './src/new_rider_homescreen';
 import { RatingScreen } from './src/Rating';
 import KarmaBlackjack from './src/KarmaBlackjack/KarmaBlackjack';
 import CompletedRides from './src/CompletedRides/CompletedRideScreen';
+import Transactions from './src/Transactions/TransactionsScreen';
+import RiderMyRides from './src/RideTabs/RideTabsScreen';
 import DriverMyRides from './src/DriverMyRides/DriverMyRidesScreen';
 import DriverProfile from './src/DriverProfile/DriverProfileScreen';
 import RiderNotifications from './src/RiderNotifications/RiderNotificationsScreen';
@@ -43,6 +46,7 @@ import Animated, {
   withSequence,
   Easing,
 } from 'react-native-reanimated';
+import { colors } from './src/SearchM/styles';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -158,10 +162,25 @@ function AppContent() {
             </TouchableOpacity>
           </View> */}
         </ScrollView>
+      ) : currentScreen === 'rider_home' ? (
+        <NewRiderHomescreen
+          onMenuPress={() => setMenuVisible(true)}
+          navigation={{ goBack: () => setCurrentScreen('home') }}
+        />
       ) : currentScreen === 'rating' ? (
         <RatingScreen onClose={() => setCurrentScreen('home')} />
       ) : currentScreen === 'completed_rides' ? (
         <CompletedRides
+          navigation={{ goBack: () => setCurrentScreen('home') }}
+          route={{ params: {} }}
+        />
+      ) : currentScreen === 'transactions' ? (
+        <Transactions
+          navigation={{ goBack: () => setCurrentScreen('home') }}
+          route={{ params: {} }}
+        />
+      ) : currentScreen === 'rider_my_rides' ? (
+        <RiderMyRides
           navigation={{ goBack: () => setCurrentScreen('home') }}
           route={{ params: {} }}
         />
@@ -259,7 +278,7 @@ const styles = StyleSheet.create({
     marginTop: 32,
   },
   findDriverButton: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#EE436E',
     borderRadius: 16,
     paddingVertical: 18,
     paddingHorizontal: 24,
@@ -301,6 +320,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   buttonContent: {
+    // backgroundColor: colors.primary,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -312,12 +332,12 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#201E1E',
+    color: colors.white,
     letterSpacing: 0.3,
   },
   chevronIcon: {
     fontSize: 24,
-    color: '#201E1E',
+    color: colors.white,
     marginLeft: 8,
     opacity: 0.4,
   },

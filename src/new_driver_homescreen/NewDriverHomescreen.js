@@ -32,18 +32,18 @@ const NewDriverHomescreen = ({ onMenuPress }) => {
       useNativeDriver: true,
     }).start();
 
-    // Pulse animation for online status
+    // Subtle pulse animation for online status
     if (isOnDuty) {
       Animated.loop(
         Animated.sequence([
           Animated.timing(statusPulse, {
-            toValue: 1.15,
-            duration: 1000,
+            toValue: 1.08,
+            duration: 1200,
             useNativeDriver: true,
           }),
           Animated.timing(statusPulse, {
             toValue: 1,
-            duration: 1000,
+            duration: 1200,
             useNativeDriver: true,
           }),
         ]),
@@ -132,21 +132,22 @@ const NewDriverHomescreen = ({ onMenuPress }) => {
         <Text style={styles.mapText}>Map View</Text>
       </View>
 
-      {/* Minimal Header - Menu and Recenter Only */}
+      {/* Premium Header */}
       <Animated.View style={[styles.header, { opacity: fadeAnim }]}>
         <TouchableOpacity
           style={styles.headerButton}
           onPress={handleMenu}
           activeOpacity={0.7}
         >
-          <Text style={{ fontSize: 22 }}>☰</Text>
+          <Text style={styles.headerButtonText}>‹</Text>
         </TouchableOpacity>
+        <Text style={styles.headerTitle}>Driver Home</Text>
         <TouchableOpacity
           style={styles.headerButton}
           onPress={handleRecenter}
           activeOpacity={0.7}
         >
-          <Text style={{ fontSize: 22 }}>🧭</Text>
+          <Text style={styles.headerButtonIcon}>⊙</Text>
         </TouchableOpacity>
       </Animated.View>
 
@@ -195,9 +196,9 @@ const NewDriverHomescreen = ({ onMenuPress }) => {
               </View>
             </Animated.View>
 
-            {/* Wallet Section - PRIMARY (High Priority) */}
+            {/* Wallet Section */}
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>Wallet</Text>
+              <Text style={styles.sectionTitle}>WALLET</Text>
             </View>
             <View style={styles.walletCard}>
               <View style={styles.walletRow}>
@@ -215,9 +216,9 @@ const NewDriverHomescreen = ({ onMenuPress }) => {
               </View>
             </View>
 
-            {/* Scheduled Rides - SECONDARY */}
+            {/* Scheduled Rides */}
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>Bookings</Text>
+              <Text style={styles.sectionTitle}>BOOKINGS</Text>
             </View>
             <TouchableOpacity
               style={styles.scheduledRidesButton}
@@ -233,7 +234,7 @@ const NewDriverHomescreen = ({ onMenuPress }) => {
                     View your scheduled rides
                   </Text>
                 </View>
-                <Text style={{ fontSize: 24 }}>📅</Text>
+                <View style={styles.scheduledRidesIndicator} />
               </View>
             </TouchableOpacity>
           </ScrollView>

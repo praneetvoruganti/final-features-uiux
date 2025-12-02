@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 // Ultra-premium minimal color scheme
 const colors = {
+  primary: '#EE436E',
   background: '#FAFAFA',
   cardBackground: '#FFFFFF',
   textPrimary: '#1A1A1A',
@@ -126,7 +127,7 @@ export const styles = StyleSheet.create({
 
   // Primary Button
   primaryButton: {
-    backgroundColor: colors.textPrimary,
+    backgroundColor: colors.primary,
     borderRadius: 16,
     paddingVertical: 18,
     paddingHorizontal: 24,
@@ -166,7 +167,7 @@ export const styles = StyleSheet.create({
   deleteButtonText: {
     fontSize: 13,
     fontWeight: '500',
-    color: colors.textTertiary,
+    color: colors.danger,
     letterSpacing: -0.1,
   },
 

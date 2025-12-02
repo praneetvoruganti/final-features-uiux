@@ -4,13 +4,14 @@ import { StyleSheet } from 'react-native';
 const colors = {
   background: '#FAFAFA',
   cardBackground: '#FFFFFF',
+  primary: '#EE436E',
   textPrimary: '#1A1A1A',
   textSecondary: '#6B6B6B',
   textTertiary: '#ADADAD',
   divider: 'rgba(0,0,0,0.08)',
   shadow: 'rgba(0,0,0,0.08)',
-  pickup: '#3B82F6',
-  destination: '#10B981',
+  pickup: '#201E1E',
+  destination: '#EE436E',
 };
 
 export const styles = StyleSheet.create({
@@ -196,7 +197,7 @@ export const styles = StyleSheet.create({
 
   // Search Button
   searchButton: {
-    backgroundColor: colors.textPrimary,
+    backgroundColor: colors.primary,
     borderRadius: 16,
     paddingVertical: 18,
     paddingHorizontal: 24,

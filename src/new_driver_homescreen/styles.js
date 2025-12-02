@@ -22,22 +22,22 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: BRAND_COLORS.background,
   },
-  
+
   // Map - Clean and Uncluttered
   mapPlaceholder: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#E5E5E5',
+    backgroundColor: '#F8F9FA',
   },
   mapText: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '500',
     color: BRAND_COLORS.textTertiary,
-    letterSpacing: 0.5,
+    letterSpacing: 0.2,
   },
 
-  // Premium Header
+  // Premium Header - Centered
   header: {
     position: 'absolute',
     top: 50,
@@ -45,19 +45,38 @@ export default StyleSheet.create({
     right: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   headerButton: {
-    width: 48,
-    height: 48,
-    borderRadius: 12,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     backgroundColor: BRAND_COLORS.white,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.12,
-    shadowRadius: 16,
-    elevation: 6,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 2,
+  },
+  headerButtonText: {
+    fontSize: 32,
+    fontWeight: '200',
+    color: BRAND_COLORS.textPrimary,
+    marginTop: -4,
+    marginLeft: -2,
+  },
+  headerButtonIcon: {
+    fontSize: 20,
+    fontWeight: '400',
+    color: BRAND_COLORS.textPrimary,
+  },
+  headerTitle: {
+    fontSize: 17,
+    fontWeight: '600',
+    color: BRAND_COLORS.textPrimary,
+    letterSpacing: -0.2,
   },
 
   // Premium Bottom Sheet
@@ -88,7 +107,7 @@ export default StyleSheet.create({
 
   // Premium Section Headers
   sectionHeader: {
-    marginTop: 32,
+    marginTop: 24,
     marginBottom: 16,
   },
   sectionTitle: {
@@ -96,20 +115,19 @@ export default StyleSheet.create({
     fontWeight: '700',
     color: BRAND_COLORS.textTertiary,
     letterSpacing: 1.5,
-    textTransform: 'uppercase',
   },
 
-  // Premium Status Card - PRIMARY
+  // Premium Status Card
   statusCard: {
     backgroundColor: BRAND_COLORS.white,
-    borderRadius: 20,
-    padding: 28,
+    borderRadius: 16,
+    padding: 20,
     marginTop: 16,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 20,
-    elevation: 4,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
+    elevation: 2,
     borderWidth: 1,
     borderColor: BRAND_COLORS.separator,
   },
@@ -134,26 +152,21 @@ export default StyleSheet.create({
   },
   dotOnline: {
     backgroundColor: BRAND_COLORS.online,
-    shadowColor: BRAND_COLORS.online,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 6,
-    elevation: 4,
   },
   dotOffline: {
     backgroundColor: BRAND_COLORS.offline,
   },
   statusTitle: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '700',
     color: BRAND_COLORS.textPrimary,
     letterSpacing: -0.3,
   },
   statusSubtitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '400',
     color: BRAND_COLORS.textSecondary,
-    letterSpacing: 0,
+    letterSpacing: -0.1,
     marginTop: 4,
     lineHeight: 20,
   },
@@ -232,13 +245,13 @@ export default StyleSheet.create({
   // Premium Wallet Card
   walletCard: {
     backgroundColor: BRAND_COLORS.white,
-    borderRadius: 20,
-    padding: 24,
+    borderRadius: 16,
+    padding: 20,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 20,
-    elevation: 4,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
+    elevation: 2,
     borderWidth: 1,
     borderColor: BRAND_COLORS.separator,
   },
@@ -256,7 +269,7 @@ export default StyleSheet.create({
     textTransform: 'uppercase',
   },
   walletValue: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: '700',
     color: BRAND_COLORS.textPrimary,
     letterSpacing: -0.5,
@@ -282,13 +295,13 @@ export default StyleSheet.create({
   // Premium Scheduled Rides Button
   scheduledRidesButton: {
     backgroundColor: BRAND_COLORS.white,
-    borderRadius: 20,
-    padding: 24,
+    borderRadius: 16,
+    padding: 20,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
-    shadowRadius: 20,
-    elevation: 4,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
+    elevation: 2,
     borderWidth: 1,
     borderColor: BRAND_COLORS.separator,
   },
@@ -301,18 +314,24 @@ export default StyleSheet.create({
     flex: 1,
   },
   scheduledRidesTitle: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: '600',
     color: BRAND_COLORS.textPrimary,
-    letterSpacing: 0,
+    letterSpacing: -0.3,
     marginBottom: 6,
   },
   scheduledRidesSubtitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '400',
     color: BRAND_COLORS.textSecondary,
-    letterSpacing: 0,
+    letterSpacing: -0.1,
     lineHeight: 20,
+  },
+  scheduledRidesIndicator: {
+    width: 4,
+    height: 40,
+    borderRadius: 2,
+    backgroundColor: BRAND_COLORS.primary,
   },
 
   // Premium Offline Confirmation Modal
@@ -330,24 +349,24 @@ export default StyleSheet.create({
   modalContent: {
     backgroundColor: BRAND_COLORS.white,
     borderRadius: 20,
-    padding: 28,
+    padding: 24,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.16,
-    shadowRadius: 24,
-    elevation: 12,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.12,
+    shadowRadius: 16,
+    elevation: 6,
   },
   modalHeader: {
     marginBottom: 12,
   },
   modalTitle: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '700',
     color: BRAND_COLORS.textPrimary,
     letterSpacing: -0.3,
   },
   modalMessage: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '400',
     color: BRAND_COLORS.textSecondary,
     letterSpacing: 0,
