@@ -151,11 +151,11 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
                   <View style={styles.rideCardTextSection}>
                     <View style={styles.rideCardHeader}>
                       <View style={styles.rideIndicator} />
-                      <Text style={styles.rideTitle}>Ride Now</Text>
+                      <Text style={styles.rideTitle}>RIDE NOW</Text>
                     </View>
                     <Text style={styles.rideTagline}>Zero Surge</Text>
                     <Text style={styles.rideDescription}>
-                      Your Ride, Your Money{'\n'}Their Livelihood
+                      Your Ride, Their Livelihood
                     </Text>
                   </View>
                   <View style={styles.rideCardImageSection}>
@@ -183,7 +183,7 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
                       styles.rideIndicatorSecondary,
                     ]}
                   />
-                  <Text style={styles.rideTitleSmall}>Hourly</Text>
+                  <Text style={styles.rideTitleSmall}>HOURLY</Text>
                 </View>
                 <Text style={styles.rideDescription}>
                   Planned Hours,{'\n'}Trusted Rides
@@ -221,11 +221,11 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
                   <View style={styles.rideCardTextSection}>
                     <View style={styles.rideCardHeader}>
                       <View style={styles.rideIndicator} />
-                      <Text style={styles.rideTitle}>Schedule</Text>
+                      <Text style={styles.rideTitle}>SCHEDULE</Text>
                     </View>
                     <Text style={styles.rideTagline}>Ride. Reserved.</Text>
                     <Text style={styles.rideDescription}>
-                      Your Daily Commute,{'\n'}Perfectly Scheduled
+                      Your Commute, Perfectly Scheduled
                     </Text>
                   </View>
                   <View style={styles.rideCardImageSection}>
@@ -244,6 +244,15 @@ const NewRiderHomescreen = ({ onMenuPress, navigation }) => {
             title="DISCOVER"
             categories={suggestionCategories}
           />
+
+          {/* Flag Image */}
+          <View style={styles.flagContainer}>
+            <Image
+              source={require('./assets/flag.png')}
+              style={styles.flagImage}
+              resizeMode="contain"
+            />
+          </View>
         </ScrollView>
       </Animated.View>
     </View>

@@ -34,14 +34,14 @@ export const carouselStyles = StyleSheet.create({
     textTransform: 'uppercase',
   },
 
-  // Premium Pills Container
+  // Pills Container
   pillsContainer: {
     paddingHorizontal: HORIZONTAL_PADDING,
     paddingBottom: 24,
     gap: 12,
   },
 
-  // Sophisticated Pill Design - Inactive State
+  // Pill Design - Inactive
   pillButton: {
     backgroundColor: 'white',
     paddingVertical: 8,
@@ -52,7 +52,7 @@ export const carouselStyles = StyleSheet.create({
     borderColor: colors.separator,
   },
 
-  // Premium Pill - Active State
+  // Pill - Active State
   pillButtonActive: {
     backgroundColor: colors.primary,
     borderColor: colors.primary,
@@ -63,7 +63,7 @@ export const carouselStyles = StyleSheet.create({
     elevation: 3,
   },
 
-  // Pill Text - Elegant Typography
+  // Pill Text
   pillText: {
     fontSize: 12,
     fontWeight: '600',
@@ -83,10 +83,10 @@ export const carouselStyles = StyleSheet.create({
     paddingLeft: HORIZONTAL_PADDING,
     paddingRight: HORIZONTAL_PADDING + CARD_SPACING,
     paddingVertical: 12,
-    paddingBottom: 24,
+    paddingBottom: 10,
   },
 
-  // Premium Card Container
+  // Card Container
   itemContainer: {
     width: CARD_WIDTH,
     minHeight: 280,
@@ -107,7 +107,7 @@ export const carouselStyles = StyleSheet.create({
     overflow: 'hidden',
   },
 
-  // Premium Category Badge
+  // Category Badge
   categoryBadge: {
     alignSelf: 'flex-start',
     backgroundColor: 'rgba(0,0,0,0.04)',
@@ -125,7 +125,7 @@ export const carouselStyles = StyleSheet.create({
     textTransform: 'uppercase',
   },
 
-  // Elegant Card Title
+  // Card Title
   itemTitle: {
     fontSize: 20,
     fontWeight: '700',
@@ -148,7 +148,7 @@ export const carouselStyles = StyleSheet.create({
     opacity: 0.8,
   },
 
-  // Elegant Highlight Badge
+  // Highlight Badge
   highlightBadge: {
     alignSelf: 'flex-start',
     backgroundColor: 'rgba(0,0,0,0.05)',
@@ -164,7 +164,7 @@ export const carouselStyles = StyleSheet.create({
     letterSpacing: 0.5,
   },
 
-  // Premium Icon Container
+  // Icon Container
   cardIconContainer: {
     width: 48,
     height: 48,
@@ -182,7 +182,7 @@ export const carouselStyles = StyleSheet.create({
     letterSpacing: 0.5,
   },
 
-  // Premium Empty State
+  // Empty State
   emptyContainer: {
     width: CARD_WIDTH,
     minHeight: 280,
@@ -222,7 +222,7 @@ export const carouselStyles = StyleSheet.create({
     opacity: 0.5,
   },
 
-  // Premium Expanded Container
+  // Expanded Container
   expandedContainer: {
     width: CARD_WIDTH,
     minHeight: 480,
@@ -242,7 +242,7 @@ export const carouselStyles = StyleSheet.create({
     overflow: 'hidden',
   },
 
-  // Elegant guide content container
+  // Guide content container
   detailedGuideContainer: {
     marginTop: 24,
     paddingTop: 24,
@@ -250,7 +250,7 @@ export const carouselStyles = StyleSheet.create({
     borderTopColor: 'rgba(0,0,0,0.08)',
   },
 
-  // Premium steps styling
+  // steps styling
   guideStepsContainer: {
     marginBottom: 24,
   },
@@ -301,7 +301,7 @@ export const carouselStyles = StyleSheet.create({
     marginBottom: 8,
   },
 
-  // Sophisticated collapse button
+  // collapse button
   collapseButton: {
     backgroundColor: colors.black,
     borderRadius: 10,
@@ -319,7 +319,7 @@ export const carouselStyles = StyleSheet.create({
     letterSpacing: 0.5,
   },
 
-  // Minimal Expand Indicator
+  // Expand Indicator
   expandIndicator: {
     position: 'absolute',
     top: 28,
@@ -337,7 +337,7 @@ export const carouselStyles = StyleSheet.create({
     opacity: 0.4,
   },
 
-  // Refined tap hint for expandable cards
+  // Tap hint for expandable cards
   expandableTapHint: {
     fontSize: 10,
     fontWeight: '500',
@@ -348,7 +348,7 @@ export const carouselStyles = StyleSheet.create({
     opacity: 0.5,
   },
 
-  // Subtle expandable card accent
+  // expandable card accent
   expandableCardAccent: {
     borderLeftWidth: 0,
   },

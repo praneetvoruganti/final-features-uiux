@@ -210,7 +210,7 @@ const SmartSuggestionsCarousel = ({ title, categories }) => {
 
       setIsTransitioning(true);
 
-      // Premium smooth transition with optimized timing
+      // smooth transitions
       categoryOpacity.value = withTiming(
         0,
         { duration: 180, easing: Easing.in(Easing.ease) },
@@ -242,7 +242,7 @@ const SmartSuggestionsCarousel = ({ title, categories }) => {
     [isQuickGuidesActive, expandedCardId],
   );
 
-  // Optimized renderItem with proper memoization
+  // Optimized renderItem with memoization
   const renderItem = React.useCallback(
     ({ item, index }) => (
       <AnimatedCarouselItem

@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions, Platform } from 'react-native';
 const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 const isSmallDevice = SCREEN_HEIGHT < 700;
 
-// OK2GO Premium Design System - Ultra-refined matching FinalCarousel & CompletedRides
+// OK2GO Premium Design System
 const colors = {
   primary: '#EE436E',
   secondary: '#FBDA25',
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
 
-  // Hero Header - Ultra-compact & Responsive
+  // Hero Header
   heroHeader: {
     backgroundColor: colors.primary,
     paddingBottom: isSmallDevice ? 24 : 32,
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
     elevation: 4,
   },
 
-  // Header Top Section - Responsive
+  // Header Top Section
   headerTop: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -79,7 +79,7 @@ export const styles = StyleSheet.create({
     width: 40,
   },
 
-  // Balance Hero Section - Minimal
+  // Balance Hero Section
   balanceSection: {
     paddingHorizontal: 24,
     paddingTop: 8,
@@ -128,7 +128,7 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
   },
 
-  // Transaction Card - Ultra-clean
+  // Transaction Card
   transactionCard: {
     backgroundColor: colors.cardBackground,
     borderRadius: 16,
@@ -243,7 +243,7 @@ export const styles = StyleSheet.create({
     color: colors.creditGreen,
   },
 
-  // Status Badge - Refined
+  // Status Badge
   statusBadge: {
     paddingHorizontal: 8,
     paddingVertical: 4,
@@ -265,7 +265,7 @@ export const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
 
-  // Empty State - Minimal
+  // Empty State
   emptyState: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -289,7 +289,7 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
   },
 
-  // Info Card - Premium
+  // Info Card
   infoCard: {
     backgroundColor: colors.iconWrapper,
     borderRadius: 16,

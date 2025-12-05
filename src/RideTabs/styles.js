@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
 
-  // Header - Matching other screens
+  // Header - Premium refined
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -37,21 +37,21 @@ export const styles = StyleSheet.create({
       android: isSmallDevice ? 48 : 56,
       default: 56,
     }),
-    paddingBottom: 20,
+    paddingBottom: 24,
     backgroundColor: colors.background,
   },
   backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     backgroundColor: colors.cardBackground,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
   },
   backIcon: {
     fontSize: 32,
@@ -61,66 +61,66 @@ export const styles = StyleSheet.create({
     marginLeft: -2,
   },
   headerTitle: {
-    fontSize: 17,
-    fontWeight: '600',
+    fontSize: 18,
+    fontWeight: '700',
     color: colors.textPrimary,
-    letterSpacing: -0.2,
+    letterSpacing: -0.4,
   },
   headerSpacer: {
-    width: 40,
+    width: 44,
   },
 
-  // Context Blurb
+  // Context Blurb - More refined
   contextContainer: {
-    paddingHorizontal: 24,
-    paddingBottom: 20,
+    paddingHorizontal: 32,
+    paddingBottom: 28,
   },
   contextText: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '400',
     color: colors.textSecondary,
-    lineHeight: 20,
-    letterSpacing: -0.1,
+    lineHeight: 22,
+    letterSpacing: 0,
     textAlign: 'center',
   },
 
-  // Tab Bar Container - Premium
+  // Tab Bar Container - Ultra refined
   tabBarContainer: {
     paddingHorizontal: 24,
-    marginBottom: 28,
+    marginBottom: 32,
   },
   tabBar: {
     flexDirection: 'row',
     backgroundColor: colors.tabBarBg,
-    borderRadius: 28,
-    padding: 3,
+    borderRadius: 30,
+    padding: 4,
   },
   tab: {
     flex: 1,
-    paddingVertical: 10,
+    paddingVertical: 12,
     paddingHorizontal: 12,
-    borderRadius: 25,
+    borderRadius: 26,
     alignItems: 'center',
     justifyContent: 'center',
   },
   tabActive: {
     backgroundColor: colors.cardBackground,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    elevation: 3,
   },
   tabText: {
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: '600',
     color: colors.textTertiary,
-    letterSpacing: 1,
+    letterSpacing: 1.2,
   },
   tabTextActive: {
     color: colors.textPrimary,
     fontWeight: '700',
-    letterSpacing: 1.2,
+    letterSpacing: 1.3,
   },
 
   // Scroll View
@@ -133,38 +133,38 @@ export const styles = StyleSheet.create({
     paddingBottom: 60,
   },
 
-  // Empty State - Minimal
+  // Empty State - Refined minimal
   emptyState: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 100,
+    paddingVertical: 120,
     paddingHorizontal: 40,
   },
   emptyStateText: {
-    fontSize: 15,
-    fontWeight: '500',
+    fontSize: 16,
+    fontWeight: '600',
     color: colors.textPrimary,
-    letterSpacing: 0,
+    letterSpacing: -0.2,
     textAlign: 'center',
-    marginBottom: 8,
+    marginBottom: 12,
   },
   emptyStateSubtext: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '400',
     color: colors.textSecondary,
-    lineHeight: 20,
+    lineHeight: 22,
     letterSpacing: 0,
     textAlign: 'center',
   },
 
-  // Section Title
+  // Section Title - Better proportions
   sectionTitle: {
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: '700',
     color: colors.textTertiary,
-    letterSpacing: 1.5,
+    letterSpacing: 1.8,
     textTransform: 'uppercase',
-    marginBottom: 16,
+    marginBottom: 20,
   },
 
   // Rides Container
@@ -172,70 +172,72 @@ export const styles = StyleSheet.create({
     width: '100%',
   },
 
-  // Ride Card - Premium with shadows
+  // Ride Card - Premium refined design
   rideCard: {
     backgroundColor: colors.cardBackground,
-    borderRadius: 16,
-    padding: 20,
-    marginBottom: 12,
+    borderRadius: 18,
+    padding: 24,
+    marginBottom: 16,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.06,
-    shadowRadius: 12,
-    elevation: 2,
-    borderWidth: 1,
-    borderColor: colors.divider,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 16,
+    elevation: 3,
+    borderWidth: 0.5,
+    borderColor: 'rgba(0,0,0,0.04)',
   },
 
-  // Ride Header - Date and Time
+  // Ride Header - Date and Time with better visual separation
   rideHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 12,
+    paddingBottom: 16,
+    marginBottom: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.divider,
   },
   rideDate: {
-    fontSize: 11,
-    fontWeight: '500',
-    color: colors.textTertiary,
-    letterSpacing: 0.2,
-  },
-  rideTime: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: colors.textSecondary,
-    letterSpacing: 0.2,
-  },
-
-  // Vehicle Info
-  vehicleInfo: {
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: '600',
     color: colors.textPrimary,
-    letterSpacing: -0.3,
-    marginBottom: 14,
-    lineHeight: 20,
+    letterSpacing: 0.3,
+    textTransform: 'uppercase',
+  },
+  rideTime: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: colors.primary,
+    letterSpacing: -0.2,
   },
 
-  // Ride Footer - Address and Fare
-  rideFooter: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-  },
-  rideAddress: {
-    flex: 1,
-    fontSize: 13,
-    fontWeight: '400',
-    color: colors.textSecondary,
-    lineHeight: 20,
-    letterSpacing: -0.1,
-    marginRight: 16,
-  },
-  rideFare: {
-    fontSize: 18,
+  // Vehicle Info - More prominent
+  vehicleInfo: {
+    fontSize: 17,
     fontWeight: '700',
     color: colors.textPrimary,
     letterSpacing: -0.4,
+    marginBottom: 20,
+    lineHeight: 24,
+  },
+
+  // Ride Footer - Better structured
+  rideFooter: {
+    flexDirection: 'column',
+    gap: 16,
+  },
+  rideAddress: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: colors.textSecondary,
+    lineHeight: 22,
+    letterSpacing: -0.1,
+  },
+  rideFare: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: colors.textPrimary,
+    letterSpacing: -0.6,
+    alignSelf: 'flex-end',
   },
 });

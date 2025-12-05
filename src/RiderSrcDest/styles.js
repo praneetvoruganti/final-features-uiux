@@ -1,17 +1,21 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, Dimensions } from 'react-native';
 
-// Ultra-premium minimal color scheme
+const { height: SCREEN_HEIGHT } = Dimensions.get('window');
+const isSmallDevice = SCREEN_HEIGHT < 700;
+
+// OK2GO Premium Design System
 const colors = {
+  primary: '#EE436E',
+  secondary: '#FBDA25',
+  black: '#201E1E',
+  white: '#FEFEFE',
   background: '#FAFAFA',
   cardBackground: '#FFFFFF',
-  primary: '#EE436E',
-  textPrimary: '#1A1A1A',
-  textSecondary: '#6B6B6B',
-  textTertiary: '#ADADAD',
+  textPrimary: '#201E1E',
+  textSecondary: '#666666',
+  textTertiary: '#999999',
   divider: 'rgba(0,0,0,0.08)',
-  shadow: 'rgba(0,0,0,0.08)',
-  pickup: '#201E1E',
-  destination: '#EE436E',
+  shadow: 'rgba(0,0,0,0.04)',
 };
 
 export const styles = StyleSheet.create({
@@ -20,33 +24,32 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
 
-  // Refined Header - Floating over map
+  // Header
   header: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
+    paddingHorizontal: 24,
+    paddingTop: Platform.select({
+      ios: isSmallDevice ? 44 : 56,
+      android: isSmallDevice ? 48 : 56,
+      default: 56,
+    }),
+    paddingBottom: 10,
+    backgroundColor: colors.background,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 24,
-    paddingTop: 60,
-    paddingBottom: 20,
-    zIndex: 10,
-    backgroundColor: 'transparent',
   },
   backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     backgroundColor: colors.cardBackground,
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.12,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
     shadowRadius: 12,
-    elevation: 6,
+    elevation: 3,
   },
   backIcon: {
     fontSize: 32,
@@ -56,168 +59,183 @@ export const styles = StyleSheet.create({
     marginLeft: -2,
   },
   headerTitle: {
-    fontSize: 17,
-    fontWeight: '600',
+    fontSize: 18,
+    fontWeight: '700',
+    color: colors.textPrimary,
+    letterSpacing: -0.4,
+  },
+  headerSpacer: {
+    width: 44,
+  },
+
+  // Inputs Card
+  inputsCard: {
+    backgroundColor: colors.cardBackground,
+    marginHorizontal: 24,
+    marginBottom: 10,
+    borderRadius: 18,
+    padding: 10,
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 16,
+    elevation: 3,
+    borderWidth: 0.5,
+    borderColor: 'rgba(0,0,0,0.04)',
+  },
+  inputRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  dotContainer: {
+    width: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pickupDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: colors.black,
+  },
+  dropDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: colors.primary,
+  },
+  input: {
+    flex: 1,
+    fontSize: 15,
+    fontWeight: '500',
     color: colors.textPrimary,
     letterSpacing: -0.2,
+    padding: 0,
+    paddingVertical: 16,
+  },
+  divider: {
+    height: 1,
+    backgroundColor: colors.divider,
+    marginVertical: 4,
+  },
+
+  // Marker Adjustment
+  markerToggleContainer: {
+    marginHorizontal: 24,
+    marginBottom: 10,
+  },
+  toggleLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: colors.textTertiary,
+    letterSpacing: 1.5,
+    textTransform: 'uppercase',
+    marginBottom: 5,
+  },
+  toggleButtons: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  toggleButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
     backgroundColor: colors.cardBackground,
+    paddingVertical: 14,
     paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: colors.divider,
+  },
+  toggleButtonActive: {
+    backgroundColor: colors.cardBackground,
+    borderColor: colors.black,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.08,
     shadowRadius: 8,
-    elevation: 4,
+    elevation: 2,
   },
-  headerSpacer: {
-    width: 40,
+  toggleDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+  },
+  toggleDotPickup: {
+    backgroundColor: colors.black,
+    opacity: 0.3,
+  },
+  toggleDotDrop: {
+    backgroundColor: colors.primary,
+    opacity: 0.3,
+  },
+  toggleDotActive: {
+    opacity: 1,
+  },
+  toggleButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.textSecondary,
+    letterSpacing: -0.2,
+  },
+  toggleButtonTextActive: {
+    color: colors.textPrimary,
+    fontWeight: '700',
   },
 
-  // Map Placeholder - Full screen
+  // Map Placeholder
   mapPlaceholder: {
     flex: 1,
     backgroundColor: colors.cardBackground,
     justifyContent: 'center',
     alignItems: 'center',
+    marginHorizontal: 24,
+    marginBottom: 10,
+    borderRadius: 18,
     borderWidth: 1,
     borderColor: colors.divider,
   },
   mapText: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: '500',
     color: colors.textTertiary,
     letterSpacing: 0.5,
   },
 
-  // Location Container - Floating bottom sheet
-  locationContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: colors.background,
-    borderTopLeftRadius: 32,
-    borderTopRightRadius: 32,
-    paddingTop: 24,
+  // Button Container
+  buttonContainer: {
     paddingHorizontal: 24,
-    paddingBottom: 40,
-    shadowColor: '#000000',
-    shadowOffset: { width: 0, height: -4 },
-    shadowOpacity: 0.12,
-    shadowRadius: 24,
-    elevation: 12,
-  },
-
-  // Location Card - Main input container
-  locationCard: {
-    backgroundColor: colors.cardBackground,
-    borderRadius: 20,
-    padding: 20,
-    marginBottom: 16,
-    shadowColor: colors.shadow,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    shadowRadius: 16,
-    elevation: 4,
-  },
-
-  // Location Input Wrapper
-  locationInputWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-
-  // Location Dot Wrapper
-  locationDotWrapper: {
-    width: 32,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  // Pickup Dot
-  pickupDot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: colors.pickup,
-  },
-
-  // Drop Dot
-  dropDot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: colors.destination,
-  },
-
-  // Location Input
-  locationInput: {
-    flex: 1,
-    fontSize: 16,
-    fontWeight: '400',
-    color: colors.textPrimary,
-    letterSpacing: -0.3,
-    padding: 0,
-    paddingVertical: 12,
-  },
-
-  // Connection Line Wrapper
-  connectionLineWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 8,
-  },
-
-  // Connection Line
-  connectionLine: {
-    width: 2,
-    height: 24,
-    backgroundColor: colors.divider,
-    marginLeft: 15,
-  },
-
-  // Swap Button
-  swapButton: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    paddingBottom: Platform.select({
+      ios: 34,
+      android: 24,
+      default: 24,
+    }),
     backgroundColor: colors.background,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 12,
-    borderWidth: 1,
-    borderColor: colors.divider,
   },
-  swapIcon: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: colors.textSecondary,
-  },
-
-  // Search Button
-  searchButton: {
+  bookButton: {
     backgroundColor: colors.primary,
     borderRadius: 16,
     paddingVertical: 18,
-    paddingHorizontal: 24,
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.15,
     shadowRadius: 16,
-    elevation: 8,
+    elevation: 6,
   },
-  searchButtonDisabled: {
-    backgroundColor: colors.divider,
+  bookButtonDisabled: {
+    backgroundColor: colors.textTertiary,
     shadowOpacity: 0,
     elevation: 0,
   },
-  searchButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: colors.cardBackground,
+  bookButtonText: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: colors.white,
     letterSpacing: -0.3,
   },
 });

@@ -118,12 +118,12 @@ const RideTabsScreen = ({ navigation, route }) => {
 
         {/* Vehicle Info */}
         <Text style={styles.vehicleInfo}>
-          {ride.vehicleType} - {ride.vehicleNumber}
+          {ride.vehicleType} • {ride.vehicleNumber}
         </Text>
 
-        {/* Address and Fare Row */}
+        {/* Address and Fare */}
         <View style={styles.rideFooter}>
-          <Text style={styles.rideAddress} numberOfLines={2}>
+          <Text style={styles.rideAddress} numberOfLines={3}>
             {ride.address}
           </Text>
           <Text style={styles.rideFare}>₹{ride.fare}</Text>

@@ -47,7 +47,7 @@ export default StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+    backgroundColor: 'rgba(0, 0, 0, 0.0)',
     zIndex: 1,
   },
 
@@ -106,9 +106,9 @@ export default StyleSheet.create({
     paddingHorizontal: 24,
   },
   greetingLabel: {
-    fontSize: isSmallDevice ? 14 : 15,
-    fontWeight: '400',
-    color: colors.textSecondary,
+    fontSize: isSmallDevice ? 15 : 16,
+    fontWeight: '700',
+    color: colors.textPrimary,
     letterSpacing: 0.1,
     marginBottom: isSmallDevice ? 6 : 8,
     lineHeight: 22,
@@ -124,8 +124,8 @@ export default StyleSheet.create({
   // Ride Types Grid - Refined spacing
   rideTypesGrid: {
     gap: isSmallDevice ? 10 : 12,
-    paddingHorizontal: 24,
-    marginBottom: isSmallDevice ? 24 : 28,
+    paddingHorizontal: 20,
+    marginBottom: isSmallDevice ? 16 : 20,
   },
 
   // Ride Row (for 2-column layout)
@@ -138,7 +138,7 @@ export default StyleSheet.create({
   rideCard: {
     backgroundColor: colors.white,
     borderRadius: isSmallDevice ? 14 : 16,
-    padding: isSmallDevice ? 18 : 20,
+    padding: isSmallDevice ? 14 : 16,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.08,
@@ -148,7 +148,7 @@ export default StyleSheet.create({
     borderColor: colors.dividerLight,
   },
   rideCardFeatured: {
-    padding: isSmallDevice ? 20 : 24,
+    padding: isSmallDevice ? 12 : 14,
     backgroundColor: colors.cardBackgroundElevated,
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.1,
@@ -250,5 +250,17 @@ export default StyleSheet.create({
     color: colors.textSecondary,
     lineHeight: 16,
     letterSpacing: 0,
+  },
+
+  // Flag Image
+  flagContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+  },
+  flagImage: {
+    width: 40,
+    height: 40,
   },
 });

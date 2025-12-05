@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
   },
 
-  // Refined Header
+  // Header
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -74,7 +74,7 @@ export const styles = StyleSheet.create({
     marginBottom: 32,
   },
 
-  // Minimal Section Label
+  // Section Label
   sectionLabel: {
     fontSize: 11,
     fontWeight: '600',
@@ -84,7 +84,7 @@ export const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
 
-  // Ultra-clean Card
+  // Card
   card: {
     backgroundColor: colors.cardBackground,
     borderRadius: 16,
@@ -104,7 +104,7 @@ export const styles = StyleSheet.create({
     minHeight: 24,
   },
 
-  // Refined Typography
+  // Typography
   infoLabel: {
     fontSize: 15,
     fontWeight: '400',
@@ -118,7 +118,7 @@ export const styles = StyleSheet.create({
     letterSpacing: -0.3,
   },
 
-  // Subtle Divider
+  //  Divider
   divider: {
     height: 1,
     backgroundColor: colors.divider,
@@ -152,7 +152,7 @@ export const styles = StyleSheet.create({
     height: 80,
   },
 
-  // Delete Button - Subtle and understated
+  // Delete Button
   deleteButton: {
     backgroundColor: 'transparent',
     borderRadius: 12,
