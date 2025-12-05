@@ -223,13 +223,6 @@ const RideTabsScreen = ({ navigation, route }) => {
         <View style={styles.headerSpacer} />
       </View>
 
-      {/* Context Blurb */}
-      <View style={styles.contextContainer}>
-        <Text style={styles.contextText}>
-          View your upcoming, completed and cancelled rides in one place
-        </Text>
-      </View>
-
       {/* Tab Bar */}
       <View style={styles.tabBarContainer}>
         <View style={styles.tabBar}>
