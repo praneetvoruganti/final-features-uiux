@@ -62,6 +62,12 @@ const menuItems = [
     letter: 'B',
     color: '#3B82F6',
   },
+  {
+    id: 'driver_trip_request',
+    title: 'Driver Trip Request',
+    letter: 'T',
+    color: '#FF6B35',
+  },
 ];
 
 const SideMenu = ({ isVisible, onClose, onMenuItemPress }) => {

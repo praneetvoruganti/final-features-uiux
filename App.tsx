@@ -36,6 +36,7 @@ import DriverMyRides from './src/DriverMyRides/DriverMyRidesScreen';
 import DriverProfile from './src/DriverProfile/DriverProfileScreen';
 import RiderNotifications from './src/RiderNotifications/RiderNotificationsScreen';
 import RiderSrcDest from './src/RiderSrcDest/RiderSrcDestScreen';
+import DriverTripRequest from './src/Driver_Trips/DriverTripRequestScreen';
 
 import Animated, {
   useSharedValue,
@@ -201,6 +202,11 @@ function AppContent() {
         />
       ) : currentScreen === 'rider_src_dest' ? (
         <RiderSrcDest
+          navigation={{ goBack: () => setCurrentScreen('home') }}
+          route={{ params: {} }}
+        />
+      ) : currentScreen === 'driver_trip_request' ? (
+        <DriverTripRequest
           navigation={{ goBack: () => setCurrentScreen('home') }}
           route={{ params: {} }}
         />
